@@ -155,7 +155,12 @@ p {
 	z-index: 100;
 	cursor: pointer;
 	transform: scale(0.8);
-	margin-right: 20px;
+}
+@media (min-width: 768px) {
+	#header .hamburger{
+		margin-right: 20px;
+	}
+    
 }
 #header .hamburger:after {
 	position: absolute;
@@ -220,45 +225,61 @@ p {
 #hero .hero {
 	max-width: 1200px;
 	margin: 0 auto;
-	padding: 0 50px;
+	padding: 0 20px;
 	justify-content: flex-start;
 }
-#hero h1 {
+@media (min-width: 768px) {
+	#hero .hero{
+		padding: 0 50px;
+	}
+    
+}
+#hero .heading {
 	display: block;
 	width: fit-content;
-	font-size: 4rem;
+	font-size: 3.5rem;
 	position: relative;
 	color: transparent;
 	animation: text_reveal 0.5s ease forwards;
 	animation-delay: 1s;
+	line-height: 50px;
+	font-weight: 800;
 }
-#hero h1:nth-child(1) {
+@media (min-width: 768px) {
+	#hero .heading{
+		font-size: 5rem;
+		line-height: 70px;
+
+	}
+    
+}
+#hero .heading:nth-child(1) {
 	animation-delay: 1s;
 }
 #hero h1:nth-child(2) {
 	animation-delay: 2s;
 }
-#hero h1:nth-child(3) {
+#hero .heading:nth-child(3) {
 	animation: text_reveal_name 0.5s ease forwards;
 	animation-delay: 3s;
 }
-#hero h1 span {
+#hero .heading span {
 	position: absolute;
 	top: 0;
 	left: 0;
 	height: 100%;
 	width: 0;
-	background-color: crimson;
+	background-color: rgb(216, 20, 59);
 	animation: text_reveal_box 1s ease;
 	animation-delay: 0.5s;
 }
-#hero h1:nth-child(1) span {
+#hero .heading:nth-child(1) span {
 	animation-delay: 0.5s;
 }
-#hero h1:nth-child(2) span {
+#hero .heading:nth-child(2) span {
 	animation-delay: 1.5s;
 }
-#hero h1:nth-child(3) span {
+#hero .heading:nth-child(3) span {
 	animation-delay: 2.5s;
 }
 
@@ -714,3 +735,105 @@ p {
 	font-size: 20px;
 	font-weight: bolder;
   }
+  .custom-experience {
+
+	display: none;
+
+}
+
+
+@media (min-width: 768px) {
+    .custom-experience {
+		width: 100%;
+		padding: 32px 80px;
+		display: flex !important;
+		justify-content: space-between;
+		display: block;
+    }
+}
+
+
+
+
+.experience-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.experience-link {
+    text-decoration: none;
+}
+
+.experience-card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 1px 1px 18px #c0646493;
+    border-radius: 8px;
+    overflow: hidden;
+	margin: 20px 20px;
+}
+
+.experience-details {
+    padding: 20px;
+    font-size: 14px;
+    color: rgb(49, 49, 49);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.experience-highlight {
+    font-weight: 800;
+    color: rgb(49, 49, 49);
+}
+
+.experience-summary-section {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.experience-header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.company-info-section {
+    flex-grow: 1;
+}
+
+.company-title {
+    font-size: xx-large;
+    font-weight: 800;
+    color: black;
+}
+
+.employment-period {
+    font-size: medium;
+}
+
+.role-title {
+    font-size: x-large;
+    margin-top: 10px;
+    color: rgb(49, 49, 49);
+}
+
+.company-logo-img {
+    width: 90px;
+    height: auto;
+}
+
+.role-summary {
+    font-size: medium;
+    color: rgb(49, 49, 49);
+}
+
+@media (min-width: 768px) {
+	.experience-card{
+		display: none;
+	}
+    
+}
