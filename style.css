@@ -308,10 +308,23 @@ p {
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	width: 80%;
+	width: 90%;
 	margin: 20px auto;
 	overflow: hidden;
 	border-radius: 10px;
+}
+@media (min-width: 768px) {
+	#projects .project-item {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		width: 80%;
+		margin: 20px auto;
+		overflow: hidden;
+		border-radius: 10px;
+	}
+    
 }
 #projects .project-info {
 	padding: 30px;
